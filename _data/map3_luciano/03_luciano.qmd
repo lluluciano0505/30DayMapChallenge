@@ -1,0 +1,62 @@
+---
+title: "Philadelphia Zoning Map"
+author: "Jingqi Lu"
+date: 2025-11-04
+format: html
+editor: visual
+---
+
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+landuse <- st_read("Zoning_BaseDistricts.geojson")
+philly <- st_read("philadelphia_boundary.geojson")
+philly <- philly[philly$name == "Philadelphia", ]
+```
+
+```{r}
+landuse_philly <- landuse %>%
+  mutate(zone_group = sub("-.*", "", long_code))
+
+landuse_subset <- landuse_philly %>%
+  mutate(zone_group = sub("-.*", "", long_code)) %>%
+  filter(zone_group %in% c("RSA", "RM", "CMX"))
+```
+
+```{r}
+ggplot() +
+  geom_sf(data = landuse_subset, aes(fill = zone_group), color = NA) +
+  geom_sf(data = philly, fill = NA, color = "white", linewidth = 0.4) +
+  scale_fill_manual(
+    name = "Zoning Type",
+    values = c(
+      "RSA" = "#E15759",
+      "RM"  = "#4E79A7",
+      "CMX" = "#76B7B2" 
+    ),
+    labels = c(
+      "RSA" = "Single-Family Residential (RSA)",
+      "RM"  = "Multi-Family Residential (RM)",
+      "CMX" = "Commercial Mixed-Use (CMX)"
+    )
+  ) +
+  labs(
+    title = "Philadelphia Zoning: Residential and Mixed-Use Districts",
+    subtitle = "Single-Family (RSA), Multi-Family (RM), and Commercial Mixed-Use (CMX)",
+    caption = "Data: Philadelphia Department of Planning & Development (Zoning Base Districts)"
+  ) +
+  theme_void() +
+  theme(
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 8, hjust = 0.5, color = "grey30"),
+    legend.position = "right",
+    legend.title = element_text(size = 10, face = "bold"),
+    legend.text = element_text(size = 9),
+    plot.caption = element_text(size = 8, color = "grey40", hjust = 1),
+    plot.background = element_rect(fill = "white", color = NA)
+  )
+```
