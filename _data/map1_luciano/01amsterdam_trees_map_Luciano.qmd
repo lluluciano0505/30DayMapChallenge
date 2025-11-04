@@ -1,0 +1,55 @@
+---
+day: 1
+creator: Luciano
+title: "Special Trees in Amsterdam"
+thumbnail: "assets/thumbnails/2025/01-luciano.png"
+source: "https://maps.amsterdam.nl/open_geodata/"
+tools: ["R", "sf", "ggplot2", "dplyr"]
+data: ["Gemeente Amsterdam Open Data"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(sf)     
+library(ggplot2)  
+library(dplyr)    
+```
+
+```{r}
+trees <- st_read("amsterdam_trees.shp")
+protected_trees <- trees %>%
+  filter(Vastgestel %in% c("Beschermwaardige houtopstand", "Nog niet (opnieuw) vastgesteld"))
+```
+```{r}
+buurten <- st_read("amsterdam_buurten.shp")
+protected_trees <- st_intersection(protected_trees, st_union(buurten))
+city_boundary <- buurten %>% st_union()
+```
+
+```{r}
+ggplot() +
+  geom_sf(data = city_boundary, fill = "white", color = "black", linewidth = 0.3) +
+  geom_sf(
+    data = protected_trees,
+    color = "#1B9E77",    
+    size = 0.9, alpha = 0.7
+  ) +
+  theme_void() +          
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background = element_rect(fill = "white", color = NA),
+    legend.position = "none",
+    plot.title = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 12, color = "grey40"),
+    plot.caption = element_text(size = 9, color = "grey50")
+  ) +
+  labs(
+    title = "Beschermwaardige Houtopstanden in Amsterdam",
+    subtitle = "All Heritage and Candidate Protected Trees",
+    caption = "Data: Gemeente Amsterdam Open Data"
+  )
+```
+
