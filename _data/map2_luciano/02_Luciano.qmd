@@ -1,0 +1,39 @@
+---
+day: 2
+creator: Luciano
+title: "The Bagua City Street Pattern of Tekes, Xinjiang"
+thumbnail: "assets/thumbnails/2025/02-luciano.png"
+source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map2_luciano/02_tekes_bagua.qmd"
+tools: ["R", "sf", "ggplot2", "osmdata"]
+data: ["OpenStreetMap"]
+---
+
+
+```{r}
+library(osmdata)
+library(sf)
+library(ggplot2)
+```
+
+
+```{r}
+q <- getbb("Tekes, Xinjiang, China") |> opq()
+
+roads <- q %>%
+  add_osm_feature(key = "highway") %>%
+  osmdata_sf()
+
+road_lines <- roads$osm_lines
+```
+
+```{r}
+ggplot() +
+  geom_sf(data = road_lines, color = "#2C7BB6", size = 0.3, alpha = 0.8) +
+  coord_sf(xlim = c(81.82, 81.86), ylim = c(43.20, 43.24), expand = FALSE) +
+  theme_void() +
+  labs(
+    title = "The 'Bagua City' Street Pattern of Tekes, Xinjiang",
+    caption = "Data: OpenStreetMap via {osmdata}"
+  )
+```
+

@@ -11,4 +11,4 @@ This map shows all **Beschermwaardige Houtopstanden** — heritage and candidate
 Each green dot represents a tree recorded as *worthy of protection* by the city.  
 Data were cleaned and visualized using R (`sf`, `ggplot2`).
 
-![Map preview](assets/thumbnails/2025/01-luciano.png)
+![Map preview](assets/thumbnails/2025/01_Luciano.png)
