@@ -2,7 +2,7 @@
 day: 1
 creator: Luciano
 title: Special Trees in Amsterdam
-thumbnail: /assets/thumbnails/2025/00-template.png
+thumbnail: /assets/thumbnails/2025/01_Luciano.png
 source: https://maps.amsterdam.nl/open_geodata/
 ---
 

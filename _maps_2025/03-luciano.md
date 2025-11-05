@@ -2,7 +2,7 @@
 day: 3
 creator: Jingqi Lu
 title: "Residential and Mixed-Use Zoning of Philadelphia, Pennsylvania"
-thumbnail: "assets/thumbnails/2025/03-philly-zoning.png"
+thumbnail: "assets/thumbnails/2025/03_Luciano.png"
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map3_jingqi/03_philly_zoning.qmd"
 tools: ["R", "sf", "ggplot2"]
 data: ["Philadelphia Department of Planning & Development"]

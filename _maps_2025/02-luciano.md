@@ -2,7 +2,7 @@
 day: 2
 creator: Luciano
 title: "The Bagua City Street Pattern of Tekes, Xinjiang"
-thumbnail: "assets/thumbnails/2025/02-luciano.png"
+thumbnail: "assets/thumbnails/2025/02_Luciano.png"
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map2_luciano/02_tekes_bagua.qmd"
 tools: ["R", "sf", "ggplot2", "osmdata"]
 data: ["OpenStreetMap"]
