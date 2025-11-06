@@ -2,7 +2,7 @@
 day: 5
 creator: Jingqi Lu
 title: "Iceland Terrain and Major Rivers"
-thumbnail: "assets/thumbnails/2025/05-luciano.png"
+thumbnail: "assets/thumbnails/2025/05_Luciano.png"
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map6_jingqi/06_iceland_dem.qmd"
 tools: ["Google Earth Engine", "IslandsDEM v1.0", "HydroSHEDS"]
 data: ["IslandsDEM v1.0 (National Land Survey of Iceland)", "HydroRIVERS (WWF HydroSHEDS)"]

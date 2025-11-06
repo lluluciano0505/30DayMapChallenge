@@ -2,7 +2,7 @@
 day: 6
 creator: Jingqi Lu
 title: "Golden Gate Elevation in 3D Hexagons"
-thumbnail: "assets/thumbnails/2025/05_Luciano.png"
+thumbnail: "assets/thumbnails/2025/06_Luciano.png"
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map5_jingqi/05_golden_gate.qmd"
 tools: ["R", "elevatr", "rayshader", "ggplot2"]
 data: ["AWS Terrain Tiles via {elevatr}"]
