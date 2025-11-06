@@ -9,3 +9,5 @@ data: ["IslandsDEM v1.0 (National Land Survey of Iceland)", "HydroRIVERS (WWF Hy
 ---
 This map visualizes Iceland’s rugged terrain and major river systems using the 10-meter IslandsDEM v1.0 dataset.  
 Color gradients represent elevation from coastal lowlands to volcanic highlands, with summits above 2000 m shown in red.  
+
+![Map preview](assets/thumbnails/2025/05_Luciano.png)

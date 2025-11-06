@@ -15,3 +15,5 @@ while blue points mark **visited destinations** across Europe, Asia, and North A
 Dashed lines connect each home city to its label on the oceans,  
 creating a static global perspective of personal mobility —  
 a spatial diary of movement and belonging.
+
+![Map preview](assets/thumbnails/2025/04_Luciano.png)
