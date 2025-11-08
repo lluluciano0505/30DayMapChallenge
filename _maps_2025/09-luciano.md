@@ -1,7 +1,8 @@
 ---
+day: 9
 creator: Jingqi Lu  
 title: "Hydraulic Structure of the Polder System in the Jianghan Plain and Yangtze River Basin"  
-thumbnail: "assets/thumbnails/2025/09_polder_system.png"  
+thumbnail: "assets/thumbnails/2025/09_Luciano.jpg"  
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map9_jingqi/09_polder_system.qmd"  
 tools: ["Hand-drawn sketch", "Ink & paper", "Digitized via Adobe Scan"]  
 data: ["Traditional Chinese hydraulic diagrams", "Jianghan Plain field studies"]  

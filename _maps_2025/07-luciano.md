@@ -1,7 +1,8 @@
 ---
+day: 7
 creator: Jingqi Lu  
 title: "Chicago Road Accessibility by Foodbank Coverage (500 m)"  
-thumbnail: "assets/thumbnails/2025/07_accessibility.png"  
+thumbnail: "assets/thumbnails/2025/07_Luciano.png"  
 source: "https://github.com/jingqilu/30DayMapChallenge/blob/main/_data/map7_jingqi/07_accessibility.qmd"  
 tools: ["ArcGIS Pro", "Python (GeoPandas, Contextily)", "QGIS"]  
 data: ["Chicago Food Pantries (City of Chicago Data Portal)", "OpenStreetMap Road Network (via OSMnx)"]  
