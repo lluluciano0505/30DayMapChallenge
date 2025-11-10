@@ -12,4 +12,5 @@ This schematic map illustrates the hydraulic structure of the traditional polder
 The diagram depicts the relationship between upland and lowland fields, levee ridges, inner and outer rivers, weirs, and sluices, which together form a closed-loop irrigation and drainage system.
 This traditional water-control landscape reflects the engineering wisdom of Chinese lowland agriculture — balancing flood protection, irrigation, and cultivation within a compact hydraulic unit.
 
-![Map preview](assets/thumbnails/2025/09_Luciano.jpq)
+![Map preview](assets/thumbnails/2025/09_Luciano.jpg)
+
